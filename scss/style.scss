@@ -3,3 +3,6 @@ body {
     grid-template-columns: 1fr 4fr;
 }
 
+#regular-links>ul>li, #settings-links>ul>li {
+    list-style: none;
+}
