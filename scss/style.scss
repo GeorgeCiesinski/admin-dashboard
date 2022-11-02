@@ -3,6 +3,36 @@ body {
     grid-template-columns: 1fr 4fr;
 }
 
+// SIDE MENU
+
+#side-menu {
+    display: grid;
+    grid-template-rows: 100px 400px 400px;
+}
+
 #regular-links>ul>li, #settings-links>ul>li {
     list-style: none;
+}
+
+// MAIN
+
+#main {
+    display: grid;
+    grid-template-rows: 150px 1fr;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#pages {
+    
+}
+
+#page-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
