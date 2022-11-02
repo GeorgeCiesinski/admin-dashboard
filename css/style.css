@@ -6,7 +6,7 @@ body {
 
 #side-menu {
   display: grid;
-  grid-template-rows: max-content 400px 400px;
+  grid-template-rows: max-content max-content max-content;
   background-color: darkgrey; }
 
 #logo-text {
@@ -20,8 +20,19 @@ body {
   font-size: 50px;
   color: red; }
 
+#regular-links > ul, #settings-links > ul {
+  padding: 5px; }
+
 #regular-links > ul > li, #settings-links > ul > li {
-  list-style: none; }
+  list-style: none;
+  padding-top: 5px; }
+
+#regular-links > ul > li > a, #settings-links > ul > li > a {
+  color: white;
+  text-decoration: none;
+  font-size: 150%;
+  font-weight: bold;
+  height: 100%; }
 
 #main {
   display: grid;
@@ -48,6 +59,7 @@ body {
   grid-template-rows: 1fr 1fr; }
 
 #pages {
+  padding: 10px;
   grid-column: 1 / 2;
   grid-row: 1 / 3; }
 
@@ -59,6 +71,9 @@ body {
 
 .page {
   border: 2px solid black; }
+
+#news, #users {
+  padding: 10px 10px 0 0; }
 
 #news > div, #users > div {
   border: 2px solid black; }
