@@ -1,4 +1,5 @@
 body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -8,8 +9,22 @@ body {
 
 #side-menu {
     display: grid;
-    grid-template-rows: 100px 400px 400px;
+    grid-template-rows: max-content 400px 400px;
     background-color: darkgrey;
+}
+
+#logo-text {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+#logo-text>h1 {
+    margin: auto;
+}
+
+#logo {
+    font-size: 50px;
+    color: red;
 }
 
 #regular-links>ul>li, #settings-links>ul>li {
@@ -20,7 +35,7 @@ body {
 
 #main {
     display: grid;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 #top-menu {
@@ -49,19 +64,26 @@ body {
 }
 
 #pages {
-    
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
 
-#page-items {
+#pages>div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 5px;
 }
 
-.page, .announcement, .user {
+.page {
     border: 2px solid black;
 }
 
-.announcement, .user {
+#news>div, #users>div {
+    border: 2px solid black;
+}
+
+.news-item, .user {
     font-size: 75%;
 }
+
