@@ -3,18 +3,22 @@
     --secondary-color: lightblue;
     --background-color: lightgrey;
     --card-color: white;
+    --side-menu-width: 250px;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
-    display: grid;
-    grid-template-columns: max-content 4fr;
+    // display: grid;
+    // grid-template-columns: max-content 4fr;
 }
 
 // SIDE MENU
 
 #side-menu {
+    position: fixed;
+    height: 100%;
+    width: var(--side-menu-width);
     display: grid;
     grid-template-rows: max-content max-content max-content;
     background-color: var(--primary-color);
@@ -67,12 +71,19 @@ body {
 }
 
 #top-menu {
+    position: sticky;
+    top: -50px;
+    left: var(--side-menu-width);
+    width: -webkit-calc(100% - var(--side-menu-width));
+    width: -moz-calc(100% - var(--side-menu-width));
+    width: calc(100% - var(--side-menu-width));
     background-color: var(--secondary-color);
+    z-index: 2;
 }
 
 #top-menu>.top {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+    // display: grid;
+    // grid-template-columns: 4fr 1fr;
 }
 
 #search-bar {
@@ -139,10 +150,16 @@ body {
 
 // Content
 #content {
+    position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: var(--background-color);
+    left: var(--side-menu-width);
+    width: -webkit-calc(100% - var(--side-menu-width));
+    width: -moz-calc(100% - var(--side-menu-width));
+    width: calc(100% - var(--side-menu-width));
+    z-index: 0;
 }
 
 #content>div>h3 {
