@@ -107,12 +107,25 @@ body {
 
 #user-login {
     display: grid;
-    grid-template-columns: max-content max-content max-content;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr;
 }
 
-#user-login>span {
+#user-login>span, #user-login>button {
     margin: auto 0 auto 0;
+}
+
+#user-login>button {
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    transition: 1s;
+    border-radius: 25px;
+}
+
+#user-login>button:hover {
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 
 #top-menu>.bottom {
@@ -149,20 +162,27 @@ body {
     gap: 5px;
 }
 
+.page>h4 {
+    margin-top: 2px;
+}
+
+// Card like elements
+
 #news, #users {
     margin: 10px 10px 0 0;
 }
 
-// Card like elements
-.page, #news>div, #users>div {
+#news>div, #users>div {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.page, #news>div>div, #users>div>div {
     border: 1px solid var(--card-color);
     border-radius: 5px;
     padding: 5px;
     background-color: var(--card-color);
-}
-
-.page>h4 {
-    margin-top: 2px;
 }
 
 .news-item, .user {
