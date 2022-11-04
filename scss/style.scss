@@ -82,8 +82,8 @@ body {
 }
 
 #top-menu>.top {
-    // display: grid;
-    // grid-template-columns: 4fr 1fr;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
 }
 
 #search-bar {
@@ -126,11 +126,16 @@ body {
     margin: auto 0 auto 0;
 }
 
+#user-login>span {
+    font-size: 300%;
+}
+
 #user-login>button {
     border: 1px solid var(--secondary-color);
     background-color: var(--secondary-color);
     transition: 1s;
     border-radius: 25px;
+    margin: 10px;
 }
 
 #user-login>button:hover {
