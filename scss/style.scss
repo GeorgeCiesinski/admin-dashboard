@@ -118,13 +118,18 @@ body {
 
 #search-bar>input, #search-bar>button {
     float: left;
-    border: 1px solid grey;
+    border: 1px solid var(--primary-color);
 }
 
 #search-bar>input {
     background: var(--card-color);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+}
+
+#search-bar>input:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
 }
 
 #search-bar>button {
