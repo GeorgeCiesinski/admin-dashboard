@@ -1,7 +1,7 @@
 :root {
-    --primary-color: blue;
-    --secondary-color: lightblue;
-    --background-color: lightgrey;
+    --primary-color: #14532D;
+    --secondary-color: #10B981;
+    --background-color: #D1FAE5;
     --card-color: white;
     --side-menu-width: 250px;
 }
@@ -9,6 +9,25 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
+}
+
+// Global Button & Link Hover Opacity
+#regular-links>ul>li, #settings-links>ul>li, #search-bar>button,
+.content-button, .page-buttons>button, .news-buttons>button {
+    opacity: 75%;
+    transition: all 0.5s ease-in-out;
+}
+
+#regular-links>ul>li:hover, #settings-links>ul>li:hover, #search-bar>button:hover,
+.content-button:hover, .page-buttons>button:hover, .news-buttons>button:hover {
+    opacity: 100%;
+}
+
+
+
+#regular-links>ul>li:hover, #settings-links>ul>li:hover {
+    -webkit-transform: scale(1.1);  // Chrome Safari Opera
+    transform: scale(1.1);
 }
 
 // SIDE MENU
@@ -93,7 +112,7 @@ body {
 
 #search-bar>input, #search-bar>button, .content-button {
     box-sizing: border-box;
-    padding: 5px;
+    padding: 5px 15px 5px 15px;
     font-size: 17px;
 }
 
@@ -103,12 +122,13 @@ body {
 }
 
 #search-bar>input {
-    background: #f1f1f1;
+    background: var(--card-color);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
 
 #search-bar>button {
+    display: grid;
     background: var(--primary-color);
     color: white;
     border-left: none; // Remove double border
@@ -132,11 +152,7 @@ body {
 }
 
 #user-login>button {
-    border: 1px solid var(--secondary-color);
-    background-color: var(--secondary-color);
-    transition: 1s;
-    border-radius: 25px;
-    margin: 10px;
+    margin-right: 10px;
 }
 
 #user-login>button:hover {
@@ -151,10 +167,14 @@ body {
 }
 
 .content-buttons {
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+    gap: 10px;
 }
 
 .content-button {
+    display: grid;
     width: 70px;
     border: 1px solid var(--primary-color);
     border-radius: 25px;
@@ -197,7 +217,7 @@ body {
     gap: 15px;
 }
 
-.page {
+.page, .news-item {
     display: grid;
     grid-template-rows: repeat(max-content, 3);
 }
@@ -206,9 +226,16 @@ body {
     margin-top: 2px;
 }
 
-// .page-buttons {
-//     justify-items: end;
-// }
+.page-buttons, .news-buttons {
+    margin-left: auto;
+}
+
+// Card Buttons
+.page-buttons>button, .news-buttons>button {
+    color: var(--primary-color);
+    background-color: var(--card-color);
+    border: 1px solid var(--card-color);
+}
 
 #news {
     grid-column: 2 / 3;
@@ -224,19 +251,30 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.page, #news>div>div, #users>div>div {
+.user {
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+
+.page, .news-item, .user {
     border: 1px solid var(--card-color);
     border-radius: 5px;
     padding: 5px;
     background-color: var(--card-color);
+    box-shadow: 5px 5px var(--primary-color);
 }
 
 .news-item, .user {
     font-size: 75%;
 }
 
-.news-item>h4, .user>h4 {
-    margin: 2px;
+.news-item>h4, .user>div>h4 {
+    margin: 2px 0px 2px 0px;
 }
 
 .news-item>p, .user>p {
