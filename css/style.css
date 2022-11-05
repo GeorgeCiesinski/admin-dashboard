@@ -76,7 +76,38 @@ body {
 
 #top-menu > .top {
   display: grid;
-  grid-template-columns: 4fr 1fr; }
+  grid-template-columns: 1fr max-content; }
+
+#user-login {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-template-columns: max-content max-content max-content;
+  grid-template-rows: 1fr; }
+
+#user-login > h3 {
+  margin: 10px; }
+
+#user-login > span, #user-login > h3 {
+  color: white;
+  text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color), -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color); }
+
+#user-login > span, #user-login > button {
+  margin: auto 0 auto 0; }
+
+#user-login > span {
+  font-size: 250%; }
+
+#user-login > button {
+  margin-right: 10px; }
+
+#user-login > button:hover {
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: white; }
+
+#top-menu > .bottom {
+  display: grid;
+  grid-template-columns: 4fr max-content; }
 
 #search-bar {
   display: grid;
@@ -111,29 +142,6 @@ body {
   border-bottom-right-radius: 25px;
   cursor: pointer; }
 
-#user-login {
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 1fr; }
-
-#user-login > span, #user-login > button {
-  margin: auto 0 auto 0; }
-
-#user-login > span {
-  font-size: 300%; }
-
-#user-login > button {
-  margin-right: 10px; }
-
-#user-login > button:hover {
-  border: 1px solid var(--primary-color);
-  background-color: var(--primary-color);
-  color: white; }
-
-#top-menu > .bottom {
-  display: grid;
-  grid-template-columns: 4fr max-content; }
-
 .content-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -155,6 +163,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   background-color: var(--background-color);
   left: var(--side-menu-width);
+  height: 100vh;
   width: -webkit-calc(100% - var(--side-menu-width));
   width: -moz-calc(100% - var(--side-menu-width));
   width: calc(100% - var(--side-menu-width));
@@ -211,7 +220,7 @@ body {
   grid-template-columns: max-content max-content; }
 
 .page, .news-item, .user {
-  border: 1px solid var(--card-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 5px;
   padding: 5px;
   background-color: var(--card-color);
