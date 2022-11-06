@@ -167,7 +167,7 @@ body {
 #content {
   position: relative;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   left: var(--side-menu-width);
   width: -webkit-calc(100% - var(--side-menu-width));
