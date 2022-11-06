@@ -28,7 +28,8 @@ body {
   width: var(--side-menu-width);
   display: grid;
   grid-template-rows: max-content max-content max-content;
-  background-color: var(--primary-color); }
+  background-color: var(--primary-color);
+  z-index: 1; }
 
 #logo-text {
   display: grid;
@@ -62,7 +63,7 @@ body {
 
 #main {
   display: grid;
-  grid-template-rows: auto 1fr; }
+  grid-template-rows: max-content 1fr; }
 
 #top-menu {
   position: sticky;
@@ -72,7 +73,7 @@ body {
   width: -moz-calc(100% - var(--side-menu-width));
   width: calc(100% - var(--side-menu-width));
   background-color: var(--secondary-color);
-  z-index: 2; }
+  z-index: 3; }
 
 #top-menu > .top {
   display: grid;
@@ -156,18 +157,23 @@ body {
   background: var(--primary-color);
   color: white; }
 
+#background-panel {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+  z-index: 0; }
+
 #content {
   position: relative;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  background-color: var(--background-color);
   left: var(--side-menu-width);
-  height: 100vh;
   width: -webkit-calc(100% - var(--side-menu-width));
   width: -moz-calc(100% - var(--side-menu-width));
   width: calc(100% - var(--side-menu-width));
-  z-index: 0; }
+  z-index: 2; }
 
 #content > div > h3 {
   margin-top: 0; }
