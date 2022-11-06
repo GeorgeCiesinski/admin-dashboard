@@ -216,7 +216,6 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     left: var(--side-menu-width);
     width: -webkit-calc(100% - var(--side-menu-width));
     width: -moz-calc(100% - var(--side-menu-width));
@@ -224,15 +223,9 @@ body {
     z-index: 2;
 }
 
-#content>div>h3 {
-    margin-top: 0;
-}
-
 // Pages, News, Users
-#pages {
+#pages, #right-side {
     margin: 10px;
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
 }
 
 #pages>div {
@@ -243,26 +236,6 @@ body {
 
 #pages>div, #news>div, #users>div {
     gap: 15px;
-}
-
-.page, .news-item {
-    display: grid;
-    grid-template-rows: repeat(max-content, 3);
-}
-
-.page>h4 {
-    margin-top: 2px;
-}
-
-.page-buttons, .news-buttons {
-    margin-left: auto;
-}
-
-// Card Buttons
-.page-buttons>button, .news-buttons>button {
-    color: var(--primary-color);
-    background-color: var(--card-color);
-    border: 1px solid var(--card-color);
 }
 
 #news {
@@ -279,17 +252,23 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.user {
-    display: grid;
-    grid-template-rows: max-content max-content;
+// Card Buttons
+.page-buttons, .news-buttons {
+    margin-left: auto;
 }
 
-.user-info {
-    display: grid;
-    grid-template-columns: max-content max-content;
+.page-buttons>button, .news-buttons>button {
+    color: var(--primary-color);
+    background-color: var(--card-color);
+    border: 1px solid var(--card-color);
 }
 
 // Individual Cards
+.page, .news-item {
+    display: grid;
+    grid-template-rows: repeat(max-content, 3);
+}
+
 .page, .news-item, .user {
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
@@ -302,10 +281,20 @@ body {
     font-size: 75%;
 }
 
-.news-item>h4, .user>div>h4 {
+.page>h4, .news-item>h4, .user>div>h4 {
     margin: 2px 0px 2px 0px;
 }
 
 .news-item>p, .user>p {
     margin: 2px;
+}
+
+.user {
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: max-content max-content;
 }
