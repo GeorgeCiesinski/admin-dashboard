@@ -234,17 +234,13 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
+#right-side {
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+
 #pages>div, #news>div, #users>div {
     gap: 15px;
-}
-
-#news {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-}
-
-#news, #users {
-    margin: 10px 10px 0 0;
 }
 
 #news>div, #users>div {
