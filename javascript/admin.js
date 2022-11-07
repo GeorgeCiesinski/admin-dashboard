@@ -2,9 +2,9 @@
 
 const hideNews = function(event) {
     // Get Target Span
-    const newsSpan = event.target;
+    const newsSpan = this;
     // Get the p element of button's news-item
-    const newsItem = event.target.parentNode.parentNode.parentNode;
+    const newsItem = event.target.parentNode.parentNode;
     const newsP = newsItem.getElementsByTagName("p");
     // Toggle visibility
     if (newsSpan.innerText === "visibility_off") {
