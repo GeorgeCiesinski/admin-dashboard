@@ -1,13 +1,29 @@
+// Top Menu
+
+const scopeMessage = function(event) {
+    alert("This functionality is outside the project scope");
+}
+
+const logoutMessage = function(event) {
+    alert("Logout successful! (This functionality is outside the project scope");
+}
+
 // Page
+
+// Toggles favourite icon on/off
 const toggleFavourite = function(event) {
     // Get Button
     const buttonFavourite = this;
+    // Toggle icon text
     if (buttonFavourite.innerText === "star_border") {
         buttonFavourite.innerText = "star";
     } else if (buttonFavourite.innerText === "star") {
         buttonFavourite.innerText = "star_border";
     }
 }
+
+// Displays alert message that link is copied
+const shareMessage = () => alert("Link copied (This functionality is outside the project scope)");
 
 const deletePage = function(event) {
     const buttonDelete = this;
@@ -41,11 +57,19 @@ const hideNews = function(event) {
 }
 
 // Get elements
-const newsButtons = document.querySelectorAll(".news-button");
+const logoutButton = document.querySelector("#logout");
+const addButton = document.querySelector("#add-page");
+const uploadButton = document.querySelector("#upload-item");
 const favouriteButtons = document.querySelectorAll(".favourite");
+const shareButtons = document.querySelectorAll(".share");
 const deleteButtons = document.querySelectorAll(".delete");
+const newsButtons = document.querySelectorAll(".news-button");
 
 // Set Event Listeners
-newsButtons.forEach(newsButton => newsButton.addEventListener("click", hideNews));
+logoutButton.addEventListener("click", logoutMessage);
+addButton.addEventListener("click", scopeMessage);
+uploadButton.addEventListener("click", scopeMessage);
 favouriteButtons.forEach(favouriteButton => favouriteButton.addEventListener("click", toggleFavourite));
+shareButtons.forEach(shareButton => shareButton.addEventListener("click", shareMessage));
 deleteButtons.forEach(deleteButton => deleteButton.addEventListener("click", deletePage));
+newsButtons.forEach(newsButton => newsButton.addEventListener("click", hideNews));
