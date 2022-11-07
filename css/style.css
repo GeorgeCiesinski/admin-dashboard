@@ -166,8 +166,8 @@ body {
 
 #content {
   position: relative;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   left: var(--side-menu-width);
   width: -webkit-calc(100% - var(--side-menu-width));
   width: -moz-calc(100% - var(--side-menu-width));
@@ -177,12 +177,16 @@ body {
 #pages, #right-side {
   margin: 10px; }
 
+#pages {
+  flex: 3; }
+
 #pages > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); }
 
 #right-side {
+  flex: 1;
   display: grid;
   grid-template-rows: max-content max-content; }
 
@@ -213,6 +217,7 @@ body {
   box-shadow: 5px 5px var(--primary-color); }
 
 .news-item, .user {
+  min-width: 200px;
   font-size: 75%; }
 
 .page > h4, .news-item > h4, .user > div > h4 {

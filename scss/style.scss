@@ -214,8 +214,8 @@ body {
 // Content
 #content {
     position: relative;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     left: var(--side-menu-width);
     width: -webkit-calc(100% - var(--side-menu-width));
     width: -moz-calc(100% - var(--side-menu-width));
@@ -228,6 +228,10 @@ body {
     margin: 10px;
 }
 
+#pages {
+    flex: 3;
+}
+
 #pages>div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -235,6 +239,7 @@ body {
 }
 
 #right-side {
+    flex: 1;
     display: grid;
     grid-template-rows: max-content max-content;
 }
@@ -274,6 +279,7 @@ body {
 }
 
 .news-item, .user {
+    min-width: 200px;
     font-size: 75%;
 }
 
