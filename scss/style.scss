@@ -253,7 +253,7 @@ body {
 
 #news>div, #users>div {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: max-content max-content max-content;
 }
 
 // Card Buttons
