@@ -3,12 +3,10 @@
 const hideNews = function(event) {
     // Get Target Span
     const newsSpan = event.target;
-    console.log(newsSpan.innerText);
     // Get the p element of button's news-item
     const newsItem = event.target.parentNode.parentNode.parentNode;
     const newsP = newsItem.getElementsByTagName("p");
-    console.log(newsP[0]);
-
+    // Toggle visibility
     if (newsSpan.innerText === "visibility_off") {
         // Hide P
         newsP[0].hidden = true;
@@ -19,10 +17,6 @@ const hideNews = function(event) {
         newsP[0].hidden = false;
         newsSpan.innerText = "visibility_off";
     }
-    // Set p to hidden
-
-    // Change button content to visibility on
-
 }
 
 // Get elements
