@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #14532D;
-  --secondary-color: #10B981;
-  --background-color: #D1FAE5;
+  --primary-color: #0C4A6E;
+  --secondary-color: #0EA5E9;
+  --background-color: #E0F2FE;
   --card-color: white;
   --side-menu-width: 250px; }
 
@@ -207,7 +207,7 @@ body {
   border-radius: 5px;
   padding: 5px;
   background-color: var(--card-color);
-  box-shadow: 5px 5px var(--primary-color); }
+  box-shadow: 5px 5px 5px var(--primary-color); }
 
 .news-item, .user {
   min-width: 200px;
