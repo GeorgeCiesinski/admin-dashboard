@@ -1,12 +1,10 @@
 // Top Menu
 
-const scopeMessage = function(event) {
-    alert("This functionality is outside the project scope");
-}
-
-const logoutMessage = function(event) {
-    alert("Logout successful! (This functionality is outside the project scope");
-}
+// Alerts display for functionality outside project scope
+const logoutMessage = () => alert("Logout successful. This functionality is outside the project scope");
+const addMessage = () => alert("Add page. This functionality is outside the project scope");
+const uploadMessage = () => alert("Upload file. This functionality is outside the project scope");
+const shareMessage = () => alert("Link copied (This functionality is outside the project scope)");
 
 // Page
 
@@ -21,9 +19,6 @@ const toggleFavourite = function(event) {
         buttonFavourite.innerText = "star_border";
     }
 }
-
-// Displays alert message that link is copied
-const shareMessage = () => alert("Link copied (This functionality is outside the project scope)");
 
 const deletePage = function(event) {
     const buttonDelete = this;
@@ -67,8 +62,8 @@ const newsButtons = document.querySelectorAll(".news-button");
 
 // Set Event Listeners
 logoutButton.addEventListener("click", logoutMessage);
-addButton.addEventListener("click", scopeMessage);
-uploadButton.addEventListener("click", scopeMessage);
+addButton.addEventListener("click", addMessage);
+uploadButton.addEventListener("click", uploadMessage);
 favouriteButtons.forEach(favouriteButton => favouriteButton.addEventListener("click", toggleFavourite));
 shareButtons.forEach(shareButton => shareButton.addEventListener("click", shareMessage));
 deleteButtons.forEach(deleteButton => deleteButton.addEventListener("click", deletePage));

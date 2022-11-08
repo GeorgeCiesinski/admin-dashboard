@@ -168,8 +168,9 @@ body {
 
 #search-bar>input {
     background: var(--card-color);
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-radius: 25px;
+    // border-top-left-radius: 25px;
+    // border-bottom-left-radius: 25px;
 }
 
 #search-bar>input:focus {
