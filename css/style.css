@@ -162,8 +162,8 @@ body {
 
 #pages > div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); }
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); }
 
 #right-side {
   flex: 1;
@@ -178,7 +178,7 @@ body {
   grid-template-rows: max-content max-content max-content; }
 
 .page-buttons, .news-buttons {
-  margin-left: auto; }
+  margin: auto 0px 0px auto; }
 
 .page-buttons > button, .news-buttons > button {
   color: var(--primary-color);
