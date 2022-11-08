@@ -20,10 +20,10 @@ const toggleFavourite = function(event) {
     }
 }
 
+// Deletes page from dom
 const deletePage = function(event) {
     const buttonDelete = this;
     const pageElement = buttonDelete.parentNode.parentNode;
-    const pageTitle = pageElement.getElementsByTagName("h4")[0].innerText;
     let confirmDelete = confirm("Are you sure you want to delete this page?");
     if (confirmDelete) {
         pageElement.remove();
@@ -79,6 +79,7 @@ const searchPages = function(event) {
                 hidePage(page);
             }
         })
+    // Show all pages if search bar is empty
     } else if (searchTerm === "" || searchTerm === null) {
         pages.forEach(page => showPage(page));
     }
