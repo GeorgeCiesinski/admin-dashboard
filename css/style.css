@@ -206,7 +206,7 @@ body {
   border-radius: 5px;
   padding: 5px;
   background-color: var(--card-color);
-  box-shadow: 5px 5px 5px var(--primary-color); }
+  box-shadow: 5px 5px 10px var(--primary-color); }
 
 .news-item, .user {
   min-width: 200px;
