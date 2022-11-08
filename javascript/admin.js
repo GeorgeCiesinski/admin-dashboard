@@ -51,6 +51,40 @@ const hideNews = function(event) {
     }
 }
 
+// Class for pageHidden
+const pageHidden = ".page-hidden";
+
+// Check if page contains hidden class and remove it
+const hidePage = function(page) {
+    page.style.display = "none";
+}
+
+// Check that page doesn't contains hidden class and add it
+const showPage = function(page) {
+    page.style.display = "block";
+}
+
+// Search
+const searchPages = function(event) {
+    // Get search bar content
+    const searchTerm = searchBar.value;
+    const pages = document.querySelectorAll(".page");
+    if (searchTerm !== "" && searchTerm !== null) {
+        pages.forEach(page => {
+            // Reset hidden attribute
+            showPage(page);
+            // Get header and paragraph
+            const headerText = page.getElementsByTagName("h4")[0].innerText;
+            const paragraphText = page.getElementsByTagName("p")[0].innerText;
+            if (!headerText.includes(searchTerm) && !paragraphText.includes(searchTerm)) {
+                hidePage(page);
+            }
+        })
+    } else if (searchTerm === "" || searchTerm === null) {
+        pages.forEach(page => showPage(page));
+    }
+}
+
 // Get elements
 const logoutButton = document.querySelector("#logout");
 const addButton = document.querySelector("#add-page");
@@ -59,6 +93,7 @@ const favouriteButtons = document.querySelectorAll(".favourite");
 const shareButtons = document.querySelectorAll(".share");
 const deleteButtons = document.querySelectorAll(".delete");
 const newsButtons = document.querySelectorAll(".news-button");
+const searchBar = document.querySelector("#search");
 
 // Set Event Listeners
 logoutButton.addEventListener("click", logoutMessage);
@@ -68,3 +103,4 @@ favouriteButtons.forEach(favouriteButton => favouriteButton.addEventListener("cl
 shareButtons.forEach(shareButton => shareButton.addEventListener("click", shareMessage));
 deleteButtons.forEach(deleteButton => deleteButton.addEventListener("click", deletePage));
 newsButtons.forEach(newsButton => newsButton.addEventListener("click", hideNews));
+searchBar.addEventListener("keyup", searchPages);

@@ -12,14 +12,14 @@ body {
 }
 
 // Global Button & Link Hover Opacity
-#regular-links>ul>li, #settings-links>ul>li, #search-bar>button,
-.content-button, .page-buttons>button, .news-buttons>button {
+#regular-links>ul>li, #settings-links>ul>li, .content-button, 
+.page-buttons>button, .news-buttons>button {
     opacity: 75%;
     transition: all 0.5s ease-in-out;
 }
 
-#regular-links>ul>li:hover, #settings-links>ul>li:hover, #search-bar>button:hover,
-.content-button:hover, .page-buttons>button:hover, .news-buttons>button:hover {
+#regular-links>ul>li:hover, #settings-links>ul>li:hover, .content-button:hover, 
+.page-buttons>button:hover, .news-buttons>button:hover {
     opacity: 100%;
 }
 
@@ -155,13 +155,13 @@ body {
     max-width: 400px;
 }
 
-#search-bar>input, #search-bar>button, .content-button {
+#search-bar>input, .content-button {
     box-sizing: border-box;
     padding: 5px 15px 5px 15px;
     font-size: 17px;
 }
 
-#search-bar>input, #search-bar>button {
+#search-bar>input {
     float: left;
     border: 1px solid var(--primary-color);
 }
@@ -169,23 +169,11 @@ body {
 #search-bar>input {
     background: var(--card-color);
     border-radius: 25px;
-    // border-top-left-radius: 25px;
-    // border-bottom-left-radius: 25px;
 }
 
 #search-bar>input:focus {
     outline: none;
     border: 2px solid var(--primary-color);
-}
-
-#search-bar>button {
-    display: grid;
-    background: var(--primary-color);
-    color: white;
-    border-left: none; // Remove double border
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    cursor: pointer;
 }
 
 // Content Buttons
