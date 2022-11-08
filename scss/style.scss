@@ -4,6 +4,10 @@
     --background-color: #E0F2FE;
     --card-color: white;
     --side-menu-width: 250px;
+    // Breakpoints for top bar
+    --large-break: 60px;
+    --medium-break: 116px;
+    --small-break: 167.5px;
 }
 
 body {
@@ -185,6 +189,24 @@ body {
     z-index: 0;
 }
 
+@media (min-width: 988px) {
+    #content {
+        margin-top: var(--large-break);
+    }
+}
+
+@media (min-width: 725px) and (max-width: 987px) {
+    #content {
+        margin-top: var(--medium-break);
+    }
+}
+
+@media (max-width: 724px) {
+    #content {
+        margin-top: var(--small-break);
+    }
+}
+
 // Content
 #content {
     position: relative;
@@ -199,7 +221,7 @@ body {
 
 // Pages, News, Users
 #pages, #right-side {
-    margin: 10px;
+    margin: 0px 10px 0px 10px;
 }
 
 #pages {
