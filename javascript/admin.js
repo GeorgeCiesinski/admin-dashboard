@@ -27,7 +27,6 @@ const deletePage = function(event) {
     let confirmDelete = confirm("Are you sure you want to delete this page?");
     if (confirmDelete) {
         pageElement.remove();
-        alert(`\"${pageTitle}\" successfully deleted.`)
     }
 }
 
