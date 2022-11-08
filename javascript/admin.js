@@ -66,7 +66,7 @@ const showPage = function(page) {
 // Search
 const searchPages = function(event) {
     // Get search bar content
-    const searchTerm = searchBar.value;
+    const searchTerm = searchBar.value.toLowerCase();
     const pages = document.querySelectorAll(".page");
     if (searchTerm !== "" && searchTerm !== null) {
         pages.forEach(page => {
@@ -75,7 +75,7 @@ const searchPages = function(event) {
             // Get header and paragraph
             const headerText = page.getElementsByTagName("h4")[0].innerText;
             const paragraphText = page.getElementsByTagName("p")[0].innerText;
-            if (!headerText.includes(searchTerm) && !paragraphText.includes(searchTerm)) {
+            if (!headerText.toLowerCase().includes(searchTerm) && !paragraphText.toLowerCase().includes(searchTerm)) {
                 hidePage(page);
             }
         })
